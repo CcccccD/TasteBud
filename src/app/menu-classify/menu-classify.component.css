@@ -1,0 +1,43 @@
+a{
+  list-style: none;
+  text-decoration: none;
+  color: #333333;
+}
+.menu_classify_container{
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+h1{
+  font-size: 34px;
+  font-weight: bold;
+}
+.single_classify{
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.single_classify_left{
+  width: 15%;
+  font-weight: 700;
+  font-size: 20px;
+  float: left;
+  text-align: right;
+}
+.single_classify_right{
+  width: 80%;
+  float: right;
+  font-size: 16px;
+}
+span{
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  float: left;
+  margin-left: 30px;
+  margin-right: 50px;
+}
+a:hover{
+  color: #dd3915;
+}

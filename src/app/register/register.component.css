@@ -1,0 +1,36 @@
+.mycontainer{
+  background: url("../../assets/images/background_pic07.jpg")  center no-repeat;
+  min-height:758px;
+}
+.lable0{
+  color: white;
+}
+.mycontent{
+  background-color: rgba(49, 49, 49, 0.62);
+  border:none;
+}
+.form-control{
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 0 20px 0 45px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+.form-control + i{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 17px;
+  color: #c8c8c8;
+  transition: all 0.5s ease 0s;
+}
+.form-control:focus{
+  background: #e0e0e0;
+  box-shadow: none;
+  outline: 0 none;
+}
+.form-control:focus + i{
+  color: #00b4ef;
+}

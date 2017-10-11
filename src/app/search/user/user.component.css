@@ -1,0 +1,55 @@
+a{list-style: none;text-decoration: none}
+li{
+  overflow: hidden;
+}
+.search_user{
+  width: 100%;
+  margin-top: 20px;
+}
+.headpic img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.headpic{
+  float: left;
+  margin-left: 20px;
+}
+.headpic:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+.user_info{
+  float: left;
+  margin-left: 15px;
+}
+p{margin-bottom:3px}
+.user_nickname{
+  font-weight: 700;
+  color: #333333;
+}
+.user_nickname:hover{
+  color: #dd3915;
+  cursor: pointer;
+}
+.amount_of_attention,.amount_of_recipe{
+  color: grey;
+}
+.attention{
+  float: right;
+  width: 85px;
+  height: 40px;
+  background: #DD3915;
+  text-align: center;
+  margin-top: 10px;
+}
+.attention:hover{cursor: pointer}
+.follow{
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+  list-style: none;
+  color: white;
+}
+
+

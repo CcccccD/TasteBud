@@ -1,0 +1,8 @@
+<div class="follow-go-users">
+  <p class="text">我关注的厨友</p>
+  <h3 class="hint" *ngIf="flag">你还没有关注别人~</h3>
+  <div class="single_user" *ngFor="let menu of FollowGo">
+    <div class="user_headpic"><img src="{{menu.user_icon}}" height="60" width="60"></div>
+    <div class="user_name"><a  routerLink="/personal-centerOther/{{menu.id}}"  routerLinkActive="active">{{menu.name}}</a></div>
+  </div>
+</div>

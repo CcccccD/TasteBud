@@ -1,0 +1,47 @@
+a{
+  list-style: none;
+  text-decoration: none;
+}
+.my_container{
+  width: 100%;
+}
+.recipepic{
+  width: 250px;
+  height: 150px;
+  float: left;
+  margin-left: 10px;
+}
+.recipepic img{
+  width: 250px;
+  height: 150px;
+}
+.recipe_info{
+  width: 300px;
+  float: left;
+  margin-left: 33px;
+}
+.recipe_name{
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+}
+.recipe_name:hover{
+  color: #dd3915;
+}
+.recipe_materials,.amount_do,.recipe_user{
+  color: grey;
+}
+.recipe_user:hover{
+  color: #dd3915;
+}
+.search_recipe{
+  width: 90%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.search_recipe:hover{
+  opacity: 0.9;
+  color: #dd3915;
+  cursor: pointer;
+}
+

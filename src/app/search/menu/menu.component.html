@@ -1,0 +1,50 @@
+<div class="my_container">
+  <ul class="nav nav-tabs">
+    <li role="presentation" [class.active]="tab_index==index" (click)="tab_index=index" *ngFor="let item of tabs;let index=index"><a>{{item}}</a></li>
+  </ul>
+  <div [ngSwitch]="tab_index" class="content-css">
+    <div *ngSwitchCase="0">
+      <ul>
+        <li>
+          <div class="menu_list">
+            <div class="single_menu">
+              <div class="cover_pic"><img src="../../../assets/images/cover.jpg" height="230" width="300"/></div>
+              <div class="menu_name"><a href="">甜甜的</a></div>
+              <div class="state">
+                34个菜谱  0 收藏 | <a href="">叫我甜甜君</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="menu_list">
+            <div class="single_menu">
+              <div class="cover_pic"><img src="../../../assets/images/cover.jpg" height="230" width="300"/></div>
+              <div class="menu_name"><a href="">甜甜的</a></div>
+              <div class="state">
+                34个菜谱  0 收藏 | <a href="">叫我甜甜君</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="1">
+      <ul>
+        <li>
+          <div class="menu_list">
+            <div class="single_menu">
+              <div class="cover_pic"><img src="../../../assets/images/cover.jpg" height="230" width="300"/></div>
+              <div class="menu_name"><a href="">甜甜的</a></div>
+              <div class="state">
+                34个菜谱  0 收藏 | <a href="">叫我甜甜君</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--<div *ngSwitchDefault>热门</div>-->
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+<ul>
+  <li *ngFor="let user of IndexUsers | searchUserPipe:searchText ">
+    <div class="search_user">
+      <div class="headpic">
+        <a routerLink="/personal-center/{{user.id}}" routerLinkActive="active">
+          <img src="{{user.user_icon}}" height="30" width="30"/></a>
+      </div>
+
+      <div class="user_info">
+        <a class="user_nickname" routerLink="/personal-center/{{user.id}}" routerLinkActive="active">{{user.name}}</a>
+        <!--<p class="user_nickname">叫我甜甜君</p>-->
+        <!--<p class="amount_of_attention">3434个关注</p>
+        <p class="amount_of_recipe">2个菜谱 34个作品</p>-->
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+
+
+

@@ -1,0 +1,105 @@
+.menu_list{
+  width: 100%;
+}
+.title{
+  color: #c0ae7d;
+  font-size: 25px;
+  margin-left: 20px;
+}
+.menu_list{
+  width: 100%;
+}
+.single_menu{
+  width: 100%;
+  height: 240px;
+  border: solid 1px #e2e2e2;
+}
+.cover_pic{
+  width: 300px;
+  height: 180px;
+
+}
+.cover_pic img{
+  width: 279px;
+  height: 200px;
+
+}
+.cover_pic:hover{
+  opacity: 0.9;
+}
+.menu_name{
+  width: 300px;
+  height: 25px;
+  margin-top: 10px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+.menu_name a{
+  text-decoration: none;
+  color: #313131;
+}
+
+.search_user{
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+.user_list{
+  width: 100%;
+}
+.headpic img{
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  border-radius: 50%;
+
+}
+.headpic img:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.headpic{
+  float: left;
+  margin-left: 15px;
+}
+.user_info{
+  float: left;
+  margin-left: 8px;
+  margin-top: 20px;
+}
+.user_info .user_nickname{
+  color:#ccc;
+  text-decoration: none;
+}
+.user_nickname:hover{
+  cursor: pointer;
+  color: #dd3915;
+  text-decoration: none;
+}
+p{margin-bottom:3px}
+.user_nickname{
+  font-weight: 700;
+}
+.amount_of_attention,.amount_of_recipe{
+  color: grey;
+}
+.attention{
+  float: right;
+  width: 85px;
+  height: 40px;
+  background: #DD3915;
+  text-align: center;
+  margin-top: 25px;
+}
+.attention:hover{cursor: pointer}
+a{
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+  list-style: none;
+  color: white;
+}
+
+
+

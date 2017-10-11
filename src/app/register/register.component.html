@@ -1,0 +1,81 @@
+<div class="mycontainer">
+  <div class="panel panel-default col-sm-6 col-sm-offset-3 mycontent"  style="margin-top:140px;">
+    <h3 class="text-center" style="color: white;">美好邂逅从一次注册开始......</h3>
+    <div class="panel-body">
+      <form class="form-horizontal" id="regist_form" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="user_id" class="lable0 col-sm-2 control-label">手机号</label>
+          <div class="col-sm-7">
+            <input #tel="ngModel"  pattern="^1[34578]\d{9}$" type="text" class="form-control" [(ngModel)]="_telephone" id="user_id" name="userId" placeholder="输入手机号" required>
+            <i class="glyphicon glyphicon-earphone"></i>
+          </div>
+          <div class="col-sm-3 ">
+            <button *ngIf="!tel.errors&&!flag" type="button" id="getCode" class="btn btn-danger" (click)="getCode(loginForm)">获取验证码</button>
+            <button *ngIf="tel.errors||flag" type="button"  class="btn btn-danger" disabled>{{code_mes}}</button>
+          </div>
+          <div *ngIf="code_res" class="col-sm-10 col-sm-offset-2" style="color:red">
+            <div>
+              {{code_res}}
+            </div>
+          </div>
+          <div *ngIf="tel.invalid && (tel.dirty || tel.touched)" class="col-md-10 col-md-offset-2" style="color:red">
+            <div *ngIf="tel.errors.required">
+              号码不能为空
+            </div>
+            <div *ngIf="tel.errors.pattern">
+              号码格式不正确
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="user_id" class="lable0 col-sm-2 control-label">验证码</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="code" placeholder="请输入你收到验证码" [(ngModel)]="code_val" name="code">
+            <i class="glyphicon glyphicon-comment"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="user_password" class="lable0 col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <input type="password" #pass="ngModel" minlength="6" class="form-control" id="password" [(ngModel)]="_password"  name="userPassword" placeholder="输入密码" required>
+            <i class="glyphicon glyphicon-lock"></i>
+          </div>
+          <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="col-md-10 col-md-offset-2" style="color:red">
+            <div *ngIf="pass.errors.required">
+              密码不能为空
+            </div>
+            <div *ngIf="pass.errors.minlength">
+              密码大于六位
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sure_user_password" class="lable0 col-sm-2 control-label">确认密码</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="password_confirm" placeholder="请再次输入密码" [(ngModel)]="sure_password"  name="surepass" #confirmPassword="ngModel" required>
+            <i class="glyphicon glyphicon-lock"></i>
+          </div>
+          <div  *ngIf="confirmPassword.value!=pass.value  && (confirmPassword.dirty || confirmPassword.touched)" class="col-md-10 col-md-offset-2" style="color:red">
+            <div>
+              两次密码不一致
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" *ngIf="!pass.errors&&!tel.errors&&!confirmPassword.errors&&confirmPassword.value==pass.value&&!code_res" class="btn btn-danger"  id="btn_login" style="width:60%;margin-left:50px;" (click)="toRegister(loginForm)">注册</button>
+            <button type="button" *ngIf="pass.errors||tel.errors||confirmPassword.value!=pass.value||code_res" class="btn btn-danger"  style="width:60%;margin-left:50px;" disabled>注册</button>
+          </div>
+          <div *ngIf="reg_res" class="col-sm-10 col-sm-offset-2" style="color:red">
+            <div>
+              {{reg_res}}
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <p class="text-center">已有账号？去<a  routerLink="/login" routerLinkActive="active">登录...</a></p>
+  </div>
+</div>

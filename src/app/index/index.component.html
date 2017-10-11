@@ -1,0 +1,245 @@
+<div class="my_container">
+  <div class="container_top">
+    <!--分类柜-->
+    <div class="left">
+      <ul class="siderbar">
+
+        <li class="main_option main_1" >
+
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/肉类.png" height="25" width="25"/>
+            <span >肉</span>
+            <span class="arrows">></span>
+          </a>
+
+
+          <div class="submenu">
+            <div class="submenu_item">
+              <div class="title" (click)="jump($event)"><a>猪肉</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>排骨</a></span>
+                <span (click)="jump($event)"><a>五花肉</a></span>
+                <span (click)="jump($event)"><a>里脊</a></span>
+                <span (click)="jump($event)"><a>瘦肉</a></span>
+                <span (click)="jump($event)"><a>猪蹄</a></span>
+                <span (click)="jump($event)"><a>猪肉末</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+
+            <div class="submenu_item">
+              <div class="title"><a id="meat" (click)="jump($event)">鸡</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>鸡腿</a></span>
+                <span (click)="jump($event)"><a>鸡翅</a></span>
+                <span (click)="jump($event)"><a>鸡肉</a></span>
+                <span (click)="jump($event)"><a>鸡爪</a></span>
+                <span (click)="jump($event)"><a>土鸡</a></span>
+                <span (click)="jump($event)"><a>三黄鸡</a></span>
+                <span (click)="jump($event)"><a>鸡胗</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+            <div class="submenu_item">
+              <div class="title"><a href="">牛肉</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>牛腩</a></span>
+                <span (click)="jump($event)"><a>肥牛</a></span>
+                <span (click)="jump($event)"><a>牛排</a></span>
+                <span (click)="jump($event)"><a>牛肉末</a></span>
+                <span (click)="jump($event)"><a>瘦肉</a></span>
+                <span (click)="jump($event)"><a>牛尾</a></span>
+                <span (click)="jump($event)"><a>牛筋</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+            <div class="submenu_item">
+              <div class="title"><a href="">鸭</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>鸭腿</a></span>
+                <span (click)="jump($event)"><a>鸭翅</a></span>
+                <span (click)="jump($event)"><a>鸭胗</a></span>
+                <span (click)="jump($event)"><a>鸭掌</a></span>
+                <span (click)="jump($event)"><a>老鸭</a></span>
+                <span (click)="jump($event)"><a>鸭脖</a></span>
+                <span (click)="jump($event)"><a>鸭舌</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+            <div class="submenu_item">
+              <div class="title"><a href="">羊肉</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a href="">羊腿</a></span>
+                <span (click)="jump($event)"><a href="">羊肉片</a></span>
+                <span (click)="jump($event)"><a href="">羊排</a></span>
+                <span (click)="jump($event)"><a href="">羊蝎子</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="main_option main_1">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/蔬菜类.png" height="27" width="27"/><span>蔬菜</span>
+            <span class="arrows">></span>
+          </a>
+          <div class="submenu">
+            <div class="submenu_item">
+              <div class="title"><a href="">果实类</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>茄子</a></span>
+                <span (click)="jump($event)"><a>番茄</a></span>
+                <span (click)="jump($event)"><a>玉米</a></span>
+                <span (click)="jump($event)"><a>南瓜</a></span>
+                <span (click)="jump($event)"><a>丝瓜</a></span>
+                <span (click)="jump($event)"><a>冬瓜</a></span>
+                <span (click)="jump($event)"><a>豆角</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+
+            <div class="submenu_item">
+              <div class="title"><a href="">根茎类</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>土豆</a></span>
+                <span (click)="jump($event)"><a>萝卜</a></span>
+                <span (click)="jump($event)"><a>藕</a></span>
+                <span (click)="jump($event)"><a>山药</a></span>
+                <span (click)="jump($event)"><a>笋</a></span>
+                <span (click)="jump($event)"><a>红薯</a></span>
+                <span (click)="jump($event)"><a>芋头</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+            <div class="submenu_item">
+              <div class="title"><a href="">菌菇类</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>香菇</a></span>
+                <span (click)="jump($event)"><a>杏鲍菇</a></span>
+                <span (click)="jump($event)"><a>金针菇</a></span>
+                <span (click)="jump($event)"><a>木耳</a></span>
+                <span (click)="jump($event)"><a>茶树菇</a></span>
+                <span (click)="jump($event)"><a>猴头菇</a></span>
+                <span (click)="jump($event)"><a>平菇</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+
+            <div class="submenu_item">
+              <div class="title"><a href="">叶类</a></div>
+              <div class="body">
+                <span (click)="jump($event)"><a>韭菜</a></span>
+                <span (click)="jump($event)"><a>菠菜</a></span>
+                <span (click)="jump($event)"><a>圆白菜</a></span>
+                <span (click)="jump($event)"><a>油菜</a></span>
+                <span (click)="jump($event)"><a>娃娃菜</a></span>
+                <span (click)="jump($event)"><a>空心菜</a></span>
+                <span (click)="jump($event)"><a>油麦菜</a></span>
+                <span><a routerLink="/menu-classify">更多</a></span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="main_option">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/主食类.png" height="27" width="27"/>
+            <span>主食</span>
+          </a>
+        </li>
+
+        <li class="main_option">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/家常菜.png" height="27" width="27"/>
+            <span>家常菜</span>
+          </a>
+        </li>
+
+        <li class="main_option">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/餐饮美食.png" height="27" width="27"/>
+            <span>下饭菜</span>
+          </a>
+        </li>
+
+        <li class="main_option">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/早餐.png" height="27" width="33"/>
+            <span>早餐</span>
+          </a>
+
+        <li class="main_option">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/面包.png" height="27" width="27"/>
+            <span>烘焙</span>
+          </a>
+        </li>
+
+        <li class="main_option">
+          <a class="main_name" (click)="jump($event)">
+            <img src="../../assets/images/甜品.png" height="27" width="27"/>
+            <span>甜品</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--轮播图-->
+    <div class="right">
+      <app-carouse></app-carouse>
+    </div>
+  </div>
+
+  <!--应季食材-->
+  <div class="container_middle">
+    <div class="yingji_title">
+      <span>应季食材</span><a routerLink="/menu-classify" routerLinkActive="active">全部</a>
+    </div>
+    <ul class="yingji_content">
+      <li class="yingji_pic">
+        <img src="../../assets/images/秋葵.png" width="150" height="150"/>
+        <div class="hidden_div" (click)="jump($event)">
+          <span class="name">秋葵</span>
+        </div>
+      </li>
+      <li class="yingji_pic">
+        <img src="../../assets/images/西柚.jpg"  width="150" height="150"/>
+        <div class="hidden_div" (click)="jump($event)">
+          <span class="name"  id="pomelo">西柚</span>
+        </div>
+      </li>
+
+      <li class="yingji_pic">
+        <img src="../../assets/images/丝瓜.jpg" width="150" height="150"/>
+        <div class="hidden_div" (click)="jump($event)">
+          <span class="name">丝瓜</span>
+        </div>
+      </li>
+      <li class="yingji_pic">
+        <img src="../../assets/images/牛油果.jpg" width="150" height="150"/>
+        <div class="hidden_div" (click)="jump($event)">
+          <span class="name">牛油果</span>
+        </div>
+      </li>
+      <li class="yingji_pic">
+        <img src="../../assets/images/空心菜.jpg" width="150" height="150"/>
+        <div class="hidden_div" (click)="jump($event)">
+          <span class="name">空心菜</span>
+          <!--          <br>
+                    <span class="num">678个菜谱</span>-->
+        </div>
+      </li>
+      <li class="yingji_pic">
+        <img src="../../assets/images/螃蟹.jpg" width="150" height="150"/>
+        <div class="hidden_div" (click)="jump($event)">
+          <span class="name">螃蟹</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--siwtchcase-->
+  <div class="container_bottom">
+    <app-tabs></app-tabs>
+  </div>
+</div>

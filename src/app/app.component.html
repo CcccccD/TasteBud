@@ -1,0 +1,153 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--路由的指引-->
+<!--头部导航加上一个容器-->
+<div class="container1">
+  <div class="nav_container">
+    <div *ngIf="!_hiddenNavs&&flag" id="nav" class="nav">
+      <a class="nav_logo" name="navl" routerLink='/index'>
+        <!--<span class="logo_span">logo</span>-->
+        <span class="logo">
+          <!--<img src="../assets/images/碗.png" height="38" width="48"/>-->
+
+        <img style="margin-top: 5px" src="../assets/images/logo1.png" height="60" width="135"/></span>
+        <!--<span class="span">味蕾</span>-->
+      </a>
+      <div>
+        <div class="nav_bar">
+          <ul>
+            <li><a class="nav_a" routerLink="/index" routerLinkActive="active">首页</a></li>
+            <li><a class="nav_a" routerLink="/hot-list/hot-list-menu" routerLinkActive="active">热门</a></li>
+            <li><a class="nav_a" routerLink="/menu-classify" routerLinkActive="active">菜谱分类</a></li>
+            <li><a class="nav_a" routerLink="/dynamic/{{Id}}" routerLinkActive="active">动态</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form role="search">
+            <input type="text" class="form-control "  [(ngModel)]="sText" name="search" placeholder="搜索菜谱、食材、用户">
+            <button class="nav_button btn-danger btn" type="submit"  (click)="search(sText)">搜索</button>
+            <!--<input type="text" class="form-control " placeholder="搜索菜谱、食材、用户">-->
+            <!--<a class="nav_a" routerLink="/search" routerLinkActive="active">搜索</a>-->
+            <!--=====这个按钮搜索传值的时候可能得改-->
+          </form>
+        </div>
+        <div>
+          <div class="personal"><a class="nav_a" routerLink="/personal-centerOther2/{{Id}}/my-menu" routerLinkActive="active"><img
+            class="my_headpic" src={{user_icon}} height="30" width="30"/></a>
+            <div class="drop-down">
+              <a routerLink="/personal-centerOther2/{{Id}}/my-menu" routerLinkActive="active">我的厨房</a>
+              <a routerLink="/personal-centerOther2/{{Id}}/favorite-menu" routerLinkActive="active">我的收藏</a>
+              <a routerLink="/account-set" routerLinkActive="active">账号设置</a>
+              <a (click)="exit()">退出</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div *ngIf="!flag&&!_hiddenNavs" id="nav2" class="nav">
+      <a class="nav_logo"  name="navl" routerLink='/index'>
+        <!--<span class="logo_span">logo</span>-->
+        <span class="logo"><img style="margin-top: 5px" src="../assets/images/logo1.png" height="60" width="135"/></span>
+      </a>
+      <div>
+        <div class="nav_bar">
+          <ul>
+            <li><a class="nav_a" routerLink="/index" routerLinkActive="active">首页</a></li>
+            <li><a class="nav_a" routerLink="/hot-list" routerLinkActive="active">热门</a></li>
+            <li><a class="nav_a" routerLink="/menu-classify" routerLinkActive="active">菜谱分类</a></li>
+            <li><a class="nav_a"  (click)="check()">动态</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <form role="search">
+            <input type="text" class="form-control " [(ngModel)]="sText" name="search" placeholder="搜索菜谱、食材、用户">
+            <button class="nav_button btn-danger btn" type="submit"  (click)="search(sText)">搜索</button>
+          </form>
+        </div>
+        <div class="login">
+          <a routerLink="/login" routerLinkActive="active">登陆</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--  <p>
+    serverUrl:{{_url}}
+  </p>-->
+</div>
+<!--占位-->
+<router-outlet #outlet></router-outlet>
+<!--登录成功后的-->
+<div *ngIf="flag" class="footerl">
+  <div class=" footer-outer">
+    <div class=" footer-outer-l">
+      <a  title="美食生活杂志">美食生活杂志</a> &nbsp;
+      <a  title="厨房工作">厨房工作</a> &nbsp;&nbsp;&nbsp;
+      <a  title="帮助中心">帮助中心</a> &nbsp;
+      <a  title="联系我们">联系我们</a> &nbsp;
+      <a  title="意见反馈">意见反馈</a> &nbsp;
+      <a  title="隐私声明">隐私声明</a>
+    </div>
+    <div class=" footer-outer-r">
+      <a href="#">
+        <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
+      </a>
+      <a href="#">
+        <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  <div  class="footer-outer">
+    <div class="footer-outer-l">
+      <a>
+        Copyright © weiLei.com &nbsp;
+        <a class="gray-link" rel="nofollow">京ICP备13009078号-1</a> &nbsp;
+        京公网安备11010802022310号
+      </a>
+    </div>
+    <div class="footer-outer-r">
+      <a>唯有美食与爱不可辜负</a>
+    </div>
+  </div>
+</div>
+<!--回到顶部-->
+<div *ngIf="flag" id="back-to-top">
+  <a href="#navl"><img src="../assets/images/回到顶部.png"></a>
+</div>
+<div *ngIf="!flag&&!_hiddenNavs" class="footerl">
+  <div class=" footer-outer">
+    <div class=" footer-outer-l">
+      <a  title="美食生活杂志">美食生活杂志</a> &nbsp;
+      <a  title="厨房工作">厨房工作</a> &nbsp;&nbsp;&nbsp;
+      <a  title="帮助中心">帮助中心</a> &nbsp;
+      <a  title="联系我们">联系我们</a> &nbsp;
+      <a  title="意见反馈">意见反馈</a> &nbsp;
+      <a  title="隐私声明">隐私声明</a>
+    </div>
+    <div class=" footer-outer-r">
+      <a href="#">
+        <span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span>
+      </a>
+      <a href="#">
+        <span class="glyphicon glyphicon glyphicon-home" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  <div  class="footer-outer">
+    <div class="footer-outer-l">
+      <a>
+        Copyright © weiLei.com &nbsp;
+        <a class="gray-link" rel="nofollow">京ICP备13009078号-1</a> &nbsp;
+        京公网安备11010802022310号
+      </a>
+    </div>
+    <div class="footer-outer-r">
+      <a>唯有美食与爱不可辜负</a>
+    </div>
+  </div>
+</div>
+<!--回到顶部-->
+<div *ngIf="!flag&&!_hiddenNavs" id="back-to-top">
+  <a href="#navl"><img src="../assets/images/回到顶部.png"></a>
+</div>

@@ -1,0 +1,11 @@
+<div class="follow-be-users">
+  <p class="text">关注我的厨友</p>
+  <h3 class="hint" *ngIf="flag">还没有厨友关注你哟~</h3>
+
+  <div class="single_user" *ngFor="let item of follow_be">
+    <div class="user_headpic"><img src="{{item.user_icon}}" height="60" width="60"/></div>
+    <div class="user_name"><a routerLink="/personal-centerOther/{{item.id}}/my-menu">{{item.name}}</a></div>
+  </div>
+
+
+</div>

@@ -1,0 +1,321 @@
+.index_tabs{
+  width: 100%;
+  height: 75px;
+  padding-top: 25px;
+  padding-left: 335px;
+  border-bottom: solid 1px #d6d6d6;
+  cursor: pointer;
+}
+.index_tabs li{
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #909090;
+  margin-left: 5px;
+  /*border: solid 1px grey;*/
+  /*border-bottom: solid 3px transparent;*/
+  float: left;
+}
+.index_tabs li:hover{
+  color: #222222;
+  border-bottom: solid 3px #dd3915;
+}
+.active{
+  border-bottom: solid 3px #dd3915;
+}
+
+/*菜谱推荐*/
+.grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em 0 4em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Common style */
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px;
+  margin-left: 34px;
+  background: #070707;
+  text-align: center;
+  cursor: pointer;
+  width: 280px;
+  height: 216px;
+}
+.grid figure img {
+  position: relative;
+  display: block;
+  height: 100%;
+  /*max-width: 100%;*/
+  width: 324px;
+  opacity: 1;
+  object-fit: cover;
+}
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 80%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Lily *****/
+/*---------------*/
+.grid figure.effect-lily p{
+  letter-spacing: 1px;
+  font-size: 100%;
+}
+figure.effect-lily img {
+  max-width: none;
+  width: -webkit-calc(100% + 50px);
+  width: calc(100% + 50px);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-40px,0, 0);
+  transform: translate3d(-40px,0,0);
+}
+
+figure.effect-lily figcaption {
+  text-align: left;
+}
+
+figure.effect-lily figcaption > div {
+  position: absolute;
+  bottom: 0;
+  padding: 2em;
+  width: 150%;
+  margin-left: -60px;
+  height: 60%;
+}
+
+figure.effect-lily h2,
+figure.effect-lily p {
+  -webkit-transform: translate3d(0,40px,0);
+  transform: translate3d(0,40px,0);
+}
+
+figure.effect-lily h2 {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+figure.effect-lily p {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+  transition: opacity 0.2s, transform 0.35s;
+}
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2 p,
+figure.effect-lily:hover p {
+  opacity: 0.85;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2,
+figure.effect-lily:hover p {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+figure.effect-lily:hover p {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+}
+
+/*菜单推荐*/
+.grid figure .caidan{
+  position: absolute;
+  top: -20px;
+}
+.grid figure .caidan h2{
+  opacity: 0;
+}
+.grid figure:hover .caidan h2{
+  opacity: 1;
+}
+  /* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+/*=========================================*/
+figure.effect-julia {
+  background: #2f3238;
+}
+/*==========================================*/
+figure.effect-julia img {
+  max-width: none;
+  /*height: 400px;*/
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+  text-align: left;
+}
+
+figure.effect-julia h2 {
+  position: relative;
+  padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+  display: inline-block;
+  margin: 0 0 0.25em;
+  padding: 0.4em 1em;
+  background: rgba(255,255,255,0.9);
+  color: #2f3238;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 75%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-360px,0,0);
+  transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+  opacity: 0.4;
+  -webkit-transform: scale3d(1.1,1.1,1);
+  transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/*厨友推荐*/
+.kitchen{
+  padding-left: 60px;
+  padding-top: 30px;
+  margin: auto;
+}
+.port-6.effect-3{
+  width: 140px;
+  height: 140px;
+  position: relative;
+  float: left;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.port-6.effect-3 img {  max-width: 100%;  vertical-align: middle;  }
+.port-6.effect-3 img{transition: 0.5s;}
+.port-6.effect-3:hover img {  border-radius:50%; overflow:hidden;  transform: scale(0.5) translateY(-110%);  position: relative;  z-index: 9;  }
+.port-6.effect-3 .text-desc{transform: translateY(10%);padding: 45px 20px 10px;float: left; opacity: 0;  transition: 0.5s;}
+.port-6.effect-3:hover .text-desc{transform: translateY(0px); opacity: 1;}
+.text-desc {  position: absolute;  left: 0;  top: 0;  background-color: #fff;  height: 100%;  opacity: 0;  width: 100%;  }
+
+.port-6.effect-3 .text-desc h3 a{
+  text-decoration: none;
+  font-size:16px;
+  color: black;
+
+}
+.port-6.effect-3 .text-desc h3 a:hover{
+  text-decoration: none;
+  color: #dd3915;
+}
+.port-6.effect-3 .text-desc p{
+  padding: 0;
+  margin: 0;
+}
+.port-6.effect-3 .text-desc p a{
+  font-size: 14px;
+  color: gray;
+  text-decoration: none;
+}
+
+
+

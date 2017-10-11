@@ -1,0 +1,55 @@
+<div class="mycontainer">
+  <div class="main-left">
+    <div class="left-header">
+      <div class="friend-UP">
+        <span>我关注的更新</span>
+      </div>
+      <div class="Rbox"></div>
+    </div>
+    <h3 class="hint" *ngIf="flag">你关注的人还没有动态~</h3>
+    <div class="messageBox">
+      <div class="mes-Box" *ngFor="let item of Allupdate | paginate: { itemsPerPage: 5, currentPage: p }">
+        <div class="first">
+          <a class="user_link" routerLink="/personal-center/{{item.follower_id}}">
+            <img width="48px" height="48px" src="{{item.user_icon}}" alt="">
+            &nbsp;&nbsp;&nbsp;{{item.user_name}}
+          </a>
+          <b>创建菜谱</b>
+          <span class="create-date">{{item.create_time.substr(0,10)}}</span>
+        </div>
+        <div class="second">
+          <a routerLink="/menu-details/{{item.id}}">
+            <img src="{{item.cover_pic}}" width="280px" height="178px" alt="">
+          </a>
+          <div class="text">
+            <div class="text_title">
+              {{item.recipe_name}}
+            </div>
+            <div class="descripe">
+              {{item.descripe}}
+            </div>
+          </div>
+          <div class="foot">
+            {{item.cook_times}} 做过 &nbsp;| {{item.collect_times}} 收藏
+          </div>
+        </div>
+
+      </div>
+      <div  class="text-center">
+        <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+  <div class="main-right">
+    <div class="content-box">
+      <h3>关注的好友</h3>
+      <div class="user_link" *ngFor="let dyn of Allupdatel">
+        <img width="48px" height="48px" routerLink="/personal-center/{{dyn.id}}" routerLinkActive="active" src="{{dyn.user_icon}}">
+        <div class="container-dyn">
+          <p routerLink="/personal-center/{{dyn.id}}">{{dyn.name}}</p>
+          <p>{{dyn.production_number}} 菜谱 | {{dyn.collection_number}}收藏</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

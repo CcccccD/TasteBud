@@ -1,0 +1,72 @@
+<ul class="index_tabs">
+  <li *ngFor="let item of tabs;let first=first;let i=index" [class.active]="tab_index==i" (click)="tab_index=i">
+    {{item}}
+  </li>
+</ul>
+<div [ngSwitch]="tab_index" class="">
+  <div *ngSwitchCase="0">
+    <!--菜谱推荐-->
+    <div class="grid">
+      <figure *ngFor="let menu of IndexMenus | paginate: { itemsPerPage: 12, currentPage: p }" class="effect-lily">
+        <a routerLink="/menu-details/{{menu.id}}" routerLinkActive="active" style="color: white;text-decoration: none">
+          <img src="{{menu.cover_pic}}" alt="">
+          <figcaption>
+            <div>
+              <h2><a routerLink="/menu-details/{{menu.id}}" routerLinkActive="active"
+                     style="color: white;text-decoration: none">{{menu.name}}</a></h2>
+              <p> {{menu.cook_times}} 做过 | {{menu.collect_times}} 收藏</p>
+              <p><a routerLink="/personal-center/{{menu.user_id}}/my-menu" routerLinkActive="active"
+                    style="color:white;text-decoration: none">{{menu.creater}}</a></p>
+            </div>
+          </figcaption>
+        </a>
+      </figure>
+    </div>
+    <div style=" cursor: pointer" class="text-center">
+      <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+  <div *ngSwitchCase="1">
+    <!--菜单推荐-->
+    <div class="grid">
+      <figure *ngFor="let menu of IndexList | paginate: { itemsPerPage: 12, currentPage: p }" class="effect-julia">
+
+        <img src="{{menu.cover_pic}}" height="200" width="280"/>
+        <figcaption class="caidan">
+          <h2><a routerLink="/menu-gather/{{menu.id}}" routerLinkActive="active"
+                 style="color: white;text-decoration: none;font-size: 30px">{{menu.name}}</a></h2>
+          <div>
+            <p>{{menu.recipe_numbers}} 菜谱</p>
+            <p><a routerLink="/personal-center/{{menu.creater_id}}/my-menu" routerLinkActive="active"
+                  style="color:#2c2c2c;text-decoration:none;font-size: 15px">by&nbsp;{{menu.creater}}</a></p>
+            <p>{{menu.descripe.substr(0,20)+'...'}}</p>
+          </div>
+          <!--<a href="#">View more</a>-->
+        </figcaption>
+      </figure>
+    </div>
+    <div style=" cursor: pointer" *ngIf="IndexList.length>12" class="text-center">
+      <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="2" class="kitchen">
+    <!--厨友推荐-->
+    <div class="port-6 effect-3  " *ngFor="let user of IndexUsers | paginate: { itemsPerPage: 12, currentPage: p }">
+      <div class="image-box">
+        <a routerLink="/personal-center/{{user.id}}/my-menu" routerLinkActive="active">
+          <img class="img-responsive img-circle" src="{{user.user_icon}}"/>
+        </a>
+      </div>
+      <div class="text-desc">
+        <h3><a routerLink="/personal-center/{{user.id}}" routerLinkActive="active">{{user.name}}</a></h3>
+        <!--<p><a class="info nullbutton" data-toggle="modal" data-target="#modal14">{{user.signature.substring(1,5)+'...'}}</a></p>-->
+        <p><a class="info nullbutton" data-toggle="modal" data-target="#modal14">{{user.signature}}</a></p>
+      </div>
+    </div>
+    <div style=" cursor: pointer" *ngIf="IndexUsers.length>12" style="width: 100%;float: left" class="text-center">
+      <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+  <!--<div *ngSwitchDefault="0">厨友推荐</div>-->
+</div>

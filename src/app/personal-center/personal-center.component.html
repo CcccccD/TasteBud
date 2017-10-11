@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="info">
+    <div class="info_left">
+      <div class="headpic "><img src={{_usericon}} height="160" width="160"/></div>
+      <div class="simple_info">
+        <p class="simple_info_nickname">{{_name}}的厨房</p>
+        <p class="simple_info_joindate">
+          <span>{{_sex}}</span>&nbsp;&nbsp;
+          <span>{{_homeS}}{{_homeC}}</span>&nbsp;&nbsp;
+          <span>{{_nowS}}{{_nowC}}</span>&nbsp;&nbsp;
+          <span>{{_profession}}</span>&nbsp;&nbsp;
+          <span>{{_cometime}}加入</span>
+        </p>
+        <span class="simple_info_menunum">创建了{{_production_number}}个菜谱</span>&nbsp;&nbsp;
+        <span class="simple_info_favoritenum">被收藏{{_collection_number}}次</span>
+        <br><br>
+        <p>{{_signature}}</p>
+      </div>
+    </div>
+    <div class="info_right">
+      <div *ngIf="!flag" class="follow_one">
+        <a *ngIf="flagfollow1" class="followpeople" (click)="collect()">关注</a>
+        <a *ngIf="!flagfollow1" class="followed" (click)="collect()">取消关注</a>
+      </div>
+      <div *ngIf="flag" class="set">
+        <a  routerLink="/account-set" routerLinkActive="active">设置个人信息</a>
+      </div>
+      <div class="follow ">
+        <div class="follow_go">
+          <p>关注的人</p>
+          <a routerLink="./follow-go" routerLinkActive="active">{{_length}}</a>
+        </div>
+        <div class="follow_be">
+          <div>
+            <p>被关注</p>
+            <a routerLink="./follow-be" routerLinkActive="active">{{_lengthBe}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a routerLink='./my-menu' routerLinkActive="active" >菜谱</a></li>
+      <li><a routerLink="./my-menu-gather" routerLinkActive="active">菜单</a></li>
+      <li><a routerLink="./my-product" routerLinkActive="active">作品</a></li>
+      <li><a routerLink="./message-board" routerLinkActive="active">留言板</a></li>
+      <li><a class="blank"></a></li>
+      <li><a routerLink="./favorite-menu" routerLinkActive="active">收藏菜谱</a></li>
+      <li><a routerLink="./favorite" routerLinkActive="active">收藏菜单</a></li>
+    </ul>
+  </div>
+  <div>
+    <!--占位-->
+    <router-outlet></router-outlet>
+  </div>
+</div>

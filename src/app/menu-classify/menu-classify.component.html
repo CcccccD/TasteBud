@@ -1,0 +1,67 @@
+<div class="menu_classify_container">
+  <h1>分类浏览</h1>
+  <div class="single_classify">
+    <div class="single_classify_left">热门专题</div>
+    <div class="single_classify_right">
+      <li>
+      <span *ngFor="let item of hot;let index=index">
+      <a (click)="jumpsearch(item.tag_name)">
+      <span class="key" >{{item.tag_name}}</span>
+      </a>
+      </span>
+      </li>
+    </div>
+  </div>
+
+  <div class="single_classify">
+    <div class="single_classify_left">烘培甜品</div>
+    <div class="single_classify_right">
+      <li>
+        <span *ngFor="let item of sweet;let index=index">
+          <a (click)="jumpsearch(item.tag_name)">
+            <span class="key">{{item.tag_name}}</span>
+          </a>
+        </span>
+      </li>
+    </div>
+  </div>
+
+  <div class="single_classify">
+    <div class="single_classify_left">肉类</div>
+    <div class="single_classify_right">
+      <li>
+        <span *ngFor="let item of meat ;let index=index">
+          <a (click)="jumpsearch(item.tag_name)">
+            <span class="key">{{item.tag_name}}</span>
+          </a>
+        </span>
+      </li>
+    </div>
+  </div>
+
+  <div class="single_classify">
+    <div class="single_classify_left">汤粥主食</div>
+    <div class="single_classify_right">
+      <li>
+        <span *ngFor="let item of shoup;let index=index">
+          <a (click)="jumpsearch(item.tag_name)">
+            <span class="key">{{item.tag_name}}</span>
+          </a>
+        </span>
+      </li>
+    </div>
+  </div>
+
+  <div class="single_classify">
+    <div class="single_classify_left">蔬菜水果</div>
+    <div class="single_classify_right">
+      <li>
+        <span *ngFor="let item of vagetable;let index=index">
+          <a (click)="jumpsearch(item.tag_name)" >
+            <span class="key">{{item.tag_name}}</span>
+          </a>
+        </span>
+      </li>
+    </div>
+  </div>
+</div>

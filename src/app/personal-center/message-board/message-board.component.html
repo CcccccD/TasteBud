@@ -1,0 +1,24 @@
+<div class="container_message-board">
+  <form action="">
+    <textarea name="message-content" [(ngModel)]="message_content" id="message_textarea" cols="30" rows="10"></textarea>
+    <br><input type="button" (click)="toSend(message_content)" class="send-message" value="发言">
+  </form>
+  <div>
+    <!--<app-message-list></app-message-list>-->
+    <h3 class="hint" *ngIf="flag">还没有人来留言~</h3>
+    <ul *ngIf="!flag">
+      <li *ngFor="let item of AllMessage;let first=first;let i=index " class="single_message">
+        <div class="left"><a href="" class="image_link"><img src="{{item.user_icon}}" height="30" width="30"/></a></div>
+        <div class="right">
+          <div class=right_top>
+            <a class="name" routerLink="/personal-center/{{item.commenter_id}}">{{item.commenter}}</a>
+            <span>&nbsp;{{item.comment_date.substring(0,10)}} | &nbsp;
+          <a *ngIf="deleteflag"  data-toggle="modal" data-target="#myModal" (click)="delComment(i)">删除</a></span>
+          </div>
+          <div class="right_bottom">{{item.content}}</div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>

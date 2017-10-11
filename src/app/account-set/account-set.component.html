@@ -1,0 +1,106 @@
+<div class="account-set-container">
+  <span class="set-title">设置个人信息</span>
+  <div>
+    <form id="info_form" class="info" #UpdateForm="ngForm">
+      <input type="hidden" name="Id" [(ngModel)]="_id">
+      <div class="preview">
+      </div>
+      <div class="single">
+        <div class="info_title">上传头像</div>
+        <div class="info_1"><input (change)="change($event)" name="user_icon" type="file"></div>
+      </div>
+      <div *ngIf="warn"><span style="color: #dd3915;margin-left: 20px">{{warn}}</span></div>
+      <br>
+      <div class="single">
+        <div class="info_title ">昵称</div>
+        <div class="info_1 "><input name="nickname" [(ngModel)]="_name" class="info_name" type="text" maxlength="15"></div>
+      </div>
+      <br>
+      <div class="single">
+        <div class="info_title">一句话介绍</div>
+        <div class="info_1"><textarea class="info_introduce" name="introduce" [(ngModel)]="_signature" id="" cols="50" rows="2" maxlength="100"></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="single">
+        <div class="info_title">性别</div>
+        <div class="info_2">
+          <input type="radio" name="sex" value="男">男
+          <input type="radio" name="sex" value="女">女
+          <input type="radio" name="sex" value="其他">其他
+        </div>
+      </div>
+      <br>
+      <div class="single">
+        <div class="info_title">家乡</div>
+        <div class="info_2">
+          <select name=""   (change)="selectProJ($event)">
+            <option value="">请选择省份</option>
+            <option [value]="i" *ngFor="let item of data;let i=index">{{item.provence}}</option>
+          </select>
+          <select name="now_city">
+            <option value="">请选择市区</option>
+            <option   [value]="ids[_index]" *ngFor="let item of citys;let _index =index">{{item}}</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="single">
+        <div class="info_title">现居地</div>
+        <div class="info_2">
+          <select name=""(change)="selectProX($event)">
+            <option value="">请选择省份</option>
+            <option [value]="i" *ngFor="let item of data;let i=index">{{item.provence}}</option>
+          </select>
+          <select name="home_city">
+            <option value="">请选择市区</option>
+            <option [value]="idss[_index]" *ngFor="let item of cityss;let _index =index">{{item}}</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <div class="single">
+        <div class="info_title">职业</div>
+        <div class="info_2">
+          <select name="profession">请选择
+            <option value="学生">学生</option>
+            <option value="老师">老师</option>
+            <option value="政府职员" >政府职员</option>
+            <option value="教师" >教师</option>
+            <option value="医生" >医生</option>
+            <option value="营养师" >营养师</option>
+            <option value="摄影师" >摄影师</option>
+            <option value="职业厨师" >职业厨师</option>
+            <option value="律师" >律师</option>
+            <option value="会计" >会计</option>
+            <option value="翻译" >翻译</option>
+            <option value="编辑" >编辑</option>
+            <option value="音乐人" >音乐人</option>
+            <option value="演艺人" >演艺人</option>
+            <option value="广告人" >广告人</option>
+            <option value="公司文员" >公司文员</option>
+            <option value="IT/互联网" >IT/互联网</option>
+            <option value="个体商人" >个体商人</option>
+            <option value="全职主妇" >全职主妇</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <button data-toggle="modal" data-target="#myModal" class="set_update" (click)="UpdateInfo($event)">更新</button>
+    </form>
+    <!--<div class="modal fade " id="myModal" tabindex="-1">
+      &lt;!&ndash;模态框&ndash;&gt;
+      <div class="content img-rounded">
+        <div class="modal-header ">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+          <h3 *ngIf="updatestate" >更新成功</h3>
+          <h3 *ngIf="!updatestate" >更新失败</h3>
+          &lt;!&ndash;<a  data-dismiss="modal" >确认</a>&ndash;&gt;
+          <a  data-dismiss="modal">关闭</a>
+        </div>
+      </div>
+    </div>-->
+  </div>
+</div>

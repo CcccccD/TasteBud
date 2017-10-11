@@ -1,0 +1,8 @@
+<div class="favorit_menu_list">
+  <div *ngFor="let menu of PersonalMenu" class="single_menu">
+    <div class="cover_pic"><img src="{{menu.cover_pic}}" height="216" width="280"/></div>
+    <div class="menu_name"><a routerLink="/menu-details/{{menu.reciper_id}}" routerLinkActive="active">{{menu.name}}</a></div>
+    <div class="state"><a routerLink="/personal-centerOther/{{menu.creater_id}}/my-menu">{{menu.creater}}</a>
+    </div>
+  </div>
+</div>

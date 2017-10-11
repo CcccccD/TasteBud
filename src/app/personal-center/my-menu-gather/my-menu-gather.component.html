@@ -1,0 +1,17 @@
+ <div class="grid">
+   <div class="create-menu-gather">
+     <a routerLink="/create-menu-gather" routerLinkActive="active">+创建菜单</a>
+   </div>
+    <h3 class="hint" *ngIf="flag">还没有创建过菜单哟~</h3>
+    <figure *ngFor="let menu of PersonalLists" class="effect-julia">
+      <img src="{{menu.cover_pic}}" height="200" width="280"/>
+      <figcaption class="caidan">
+        <h2>
+          <a routerLink="/menu-gather/{{menu.id}}" routerLinkActive="active" style="color: white;text-decoration: none;font-size: 30px">{{menu.name}}</a></h2>
+        <div>
+          <p><a routerLink="/personal-center/{{menu.creater_id}}/my-menu" routerLinkActive="active" style="color:#2c2c2c;text-decoration:none;font-size: 15px">by&nbsp;{{menu.creater}}</a></p>
+          <p>{{menu.descripe.substr(0,20)+'...'}}</p>
+        </div>
+      </figcaption>
+    </figure>
+  </div>

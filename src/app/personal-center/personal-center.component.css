@@ -1,0 +1,160 @@
+.container{
+  width: 1000px;
+  padding-top:90px;
+  /*margin: 0 auto;*/
+  min-height: 700px;
+}
+.info_left{
+  width: 700px;
+  height: 200px;
+  float: left;
+  margin-left: 20px;
+  /*background: khaki;*/
+}
+.info_right{
+  width: 180px;
+  height: 200px;
+  float: left;
+  margin-left: 68px;
+  /*background: #d9d6ff;*/
+}
+.headpic img{
+  border-radius: 50%;
+}
+.headpic{
+  float: left;
+  /*margin-left: 30px;*/
+}
+.simple_info{
+  float: left;
+  margin-left: 33px;
+}
+.simple_info_nickname{
+  font-size: 35px;
+  font-weight: 700;
+}
+.simple_info_joindate,.simple_info_favoritenum,.simple_info_menunum{
+  color: grey;
+}
+.follow{
+  width: 170px;
+  height: 60px;
+  background: #F1F1F1;
+  margin: auto;
+  margin-top: 45px;
+}
+.follow_be{
+  width: 85px;
+  height: 60px;
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*background: pink;*/
+}
+.follow_be div{
+  border-left: solid 1px #bbbbbb;
+}
+.follow_go{
+  /*background: #c3c7fe;*/
+  float: left;
+  width: 85px;
+  height: 60px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.follow p,.follow a{
+  display: block;
+  text-align: center;
+}
+.follow a{
+  text-decoration: none;
+  color: #DD3915;
+  font-size: 15px;
+  font-weight: 600;
+}
+.set{
+  /*background: #bebebe;*/
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin: auto;
+  margin-top: 20px;
+}
+.set a{
+  color: #2c2c2c;
+  text-decoration: none;
+}
+.set:hover{
+  background: #DD3915;
+}
+.set:hover a{
+  color: white;
+}
+.follow_one{
+  text-align: center;
+  line-height: 35px;
+  margin: auto;
+  margin-top: 20px;
+}
+.followpeople{
+  width: 40px;
+  height: 25px;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 18px 28px;
+  color: #fff;
+  background-color: #DD3915;
+  text-decoration: none;
+}
+.followed{
+  width: 40px;
+  height: 25px;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 18px 28px;
+  color: #fff;
+  background-color: #ccc7c2;
+  text-decoration: none;
+}
+.follow_one .button:hover{
+  text-decoration: none;
+}
+.tabs{
+  margin-left: 17px;
+}
+li{
+  list-style: none;
+  float: left;
+  margin-left: 3px;
+  background: #f1f1f1;
+  text-align: center;
+}
+li .blank{
+  display: block;
+  width: 355px;
+}
+.blank:hover{
+  background: #f1f1f1;
+}
+li a{
+  text-decoration: none;
+  display: block;
+  height: 50px;
+  width: 95px;
+  padding-top: 17px;
+  color: #202020;
+}
+li:hover{
+    background: #DD3915;
+  }
+li:hover a{
+     color: white;
+   }
+li a.active{
+   background: #DD3915;
+   color: white;
+ }
+.nickname{
+  background: grey;
+}

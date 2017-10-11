@@ -1,0 +1,129 @@
+<div class="create_menu_container">
+  <div class="container_left">
+
+    <form id="info_form" class="info" #UploadForm="ngForm">
+      <input type="hidden" name="StepStr" [(ngModel)]= " StepStr ">
+      <input type="hidden" name="MaterialStr" [(ngModel)] = "MaterialStr">
+      <input type="hidden" name="material_amountStr" [(ngModel)] = "material_amountStr">
+      <input type="hidden" name="creater_id" [(ngModel)] = "_id">
+
+      <div class="recipe_name">
+        <input id="recipe_name" name="recipe_name"  type="text" placeholder="添加菜谱名称">
+      </div>
+      <div class="recipe_cover"></div>
+      <input name="recipe_cover1" type="file" (change)="change($event)"  class="file" >
+      <div class="intro">
+        <p>+菜谱封面</p>
+        <p>最佳尺寸：1280*1024</p>
+      </div>
+
+
+      <div class="author">
+        <a href="#">
+          <img src="{{_user_icon}}"/>
+          <span>{{_name}}</span>
+        </a>
+      </div>
+
+      <textarea name="recipe_description" required class="description-txt" cols="10" rows="10" placeholder="点击添加菜谱描述"></textarea>
+
+      <!--用料-->
+      <h2>用料</h2>
+      <div class="materials">
+        <table cellspacing="0" id="mytable">
+          <tr id="my_tr">
+            <td class="first"><input class="material"  name="material" type="text" placeholder="食材：如鸡蛋"></td>
+            <td class="second"><input class="material_amount" type="text" placeholder="用量：如1只"></td>
+            <td class="third"><img class="del" src="../../assets/images/close.png" height="11" width="11"/></td>
+          </tr>
+          <tr>
+            <td class="first"><input class="material" name="material" type="text" placeholder="食材：如鸡蛋"></td>
+            <td class="second"><input class="material_amount" type="text" placeholder="用量：如1只"></td>
+            <td class="third"><img class="del" (click)="del($event)" src="../../assets/images/close.png" height="11" width="11"/></td>
+          </tr>
+          <tr>
+            <td class="first"><input class="material"  name="material" type="text" placeholder=" 食材：如鸡蛋"></td>
+            <td class="second"><input class="material_amount" type="text" placeholder=" 用量：如1只"></td>
+            <td class="third"><img class="del" (click)="del($event)" src="../../assets/images/close.png" height="11" width="11"/></td>
+          </tr>
+          <tr>
+            <td class="first"><input class="material"  name="material" type="text" placeholder="食材：如鸡蛋"></td>
+            <td class="second"><input class="material_amount" type="text" placeholder="用量：如1只"></td>
+            <td class="third"><img class="del" (click)="del($event)" src="../../assets/images/close.png" height="11" width="11"/></td>
+          </tr>
+        </table>
+        <div class="add">
+          <input type="button" value="追加一行用料" (click)="add()">
+        </div>
+      </div>
+
+      <!--步骤-->
+      <h2>做法</h2>
+      <div class="steps_container">
+        <ol id="step">
+
+          <li class="steps_container_li" id="my_li">
+            <div class="add_step">
+              <textarea class="recipe_step" name="recipe_step" required="required"cols="30" rows="10" placeholder="点击添加菜谱步骤"></textarea>
+            </div>
+            <div class="del_line">
+              <img src="../../assets/images/close.png"   height="11" width="11"/>
+            </div>
+          </li>
+
+          <li class="steps_container_li">
+            <div class="add_step">
+              <textarea class="recipe_step" name="recipe_step" required="required" cols="30" rows="10" placeholder="点击添加菜谱步骤"></textarea>
+            </div>
+            <div class="del_line">
+              <img src="../../assets/images/close.png" (click)="del($event)" height="11" width="11"/>
+            </div>
+          </li>
+
+          <li class="steps_container_li">
+            <div class="add_step">
+              <textarea class="recipe_step" name="recipe_step"  required="required" cols="30" rows="10" placeholder="点击添加菜谱步骤"></textarea>
+            </div>
+            <div class="del_line">
+              <img src="../../assets/images/close.png" (click)="del($event)" height="11" width="11"/>
+            </div>
+          </li>
+
+          <li class="steps_container_li">
+            <div class="add_step">
+              <textarea class="recipe_step" name="recipe_step" required="required" cols="30" rows="10" placeholder="点击添加菜谱步骤"></textarea>
+            </div>
+            <div class="del_line">
+              <img src="../../assets/images/close.png" (click)="del($event)"  height="11" width="11"/>
+            </div>
+          </li>
+
+        </ol>
+        <div class="add">
+          <input type="button" value="追加菜谱步骤" (click)="addstep()">
+        </div>
+      </div>
+
+      <!--小贴士-->
+      <div class="tips_container">
+        <div class="tips_container_title">小贴士</div>
+        <div class="description">
+          <textarea class="description_txt" name="tips" cols="10" rows="10" placeholder="点击添加小贴士"></textarea>
+        </div>
+      </div>
+
+      <div class="upload">
+        <input class="uploadbtn" type="button"  (click)="UploadMenu($event)" value="发布菜谱">
+      </div>
+
+    </form>
+
+
+  </div>
+  <div class="container_right">
+    <div class="slogan">
+      <p class="title">创建菜谱的人是厨房里的天使</p>
+      <p class="content1">味蕾网鼓励大家上传自己原创的菜谱信息； 转载、翻译的内容请在简介里表明出处。</p>
+    </div>
+  </div>
+</div>

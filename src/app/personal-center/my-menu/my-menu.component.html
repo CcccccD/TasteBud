@@ -1,0 +1,20 @@
+<div class="menu_list">
+  <div class="create-menu">
+    <a routerLink="/create-menu" routerLinkActive="active">+创建菜谱</a>
+  </div>
+  <h3 class="hint" *ngIf="flag">还没有创建过菜谱哟~</h3>
+  <div class="grid">
+    <figure *ngFor="let menu of PersonalMenu" class="effect-lily">
+      <a routerLink="/menu-details/{{menu.id}}" routerLinkActive="active" style="color: white;text-decoration: none">
+      <img src="{{menu.cover_pic}}" alt=""></a>
+      <figcaption>
+        <div>
+          <h2><a routerLink="/menu-details/{{menu.id}}" routerLinkActive="active" style="color: white;text-decoration: none">{{menu.name}}</a></h2>
+          <p> {{menu.cook_times}} 做过 | {{menu.collect_times}} 收藏</p>
+          <p><a routerLink="/personal-center/{{menu.creater_id}}/my-menu" routerLinkActive="active" style="color:white;text-decoration: none">{{menu.creater}}</a></p>
+        </div>
+      </figcaption>
+
+    </figure>
+</div>
+</div>

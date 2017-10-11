@@ -1,0 +1,12 @@
+<div class="menu-popular">
+  <p class="menu-popular-title">流行菜单</p>
+  <div *ngFor="let menu of  IndexFashion" class="action">
+    <a routerLink="/menu-gather/{{menu.id}}" routerLinkActive="active" class="recipe-menu " title="{{menu.name}}">
+      <img class="recipe-menu-cover" src="{{menu.cover_pic}}" alt="{{menu.name}}" >
+      <div class="right-txt">{{menu.name}}</div>
+    </a>
+  </div>
+</div>
+
+
+

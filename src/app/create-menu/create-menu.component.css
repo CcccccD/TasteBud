@@ -1,0 +1,325 @@
+.create_menu_container{
+  width: 1000px;
+  margin: 0 auto;
+}
+.container_left{
+  width: 66%;
+  float: left;
+}
+.info{
+  width: 100%;
+  margin-top: 125px;
+}
+.container_right{
+  width: 30%;
+  float: left;
+  margin-left: 4%;
+}
+.slogan{
+  width: 100%;
+  height: 188px;
+  margin-top: 125px;
+  background-color: #f5f6f5;
+}
+.title{
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #c0ae7d;
+  text-align: center;
+}
+.content{
+  padding:0 20px;
+  line-height: 25px;
+  font-size: 14px;
+  color: #909090;
+}
+.recommend_classify{
+  width: 100%;
+  margin-top: 40px;
+}
+.classify_title{
+  font-size: 20px;
+  font-weight: 700;
+  color: #c0ae7d;
+}
+.classify_name{
+  font-size: 14px;
+  color: #909090;
+}
+
+.upload{
+  width: 100%;
+  height: 56px;
+  margin-top: 30px;
+}
+.uploadbtn{
+  width: 140px;
+  height: 56px;
+  background: #dd3915;
+  color: white;
+  border: none;
+}
+
+.recipe_name{
+  width: 100%;
+  height: 62px;
+  margin-top: 30px;
+}
+.recipe_name input{
+  height: 62px;
+  line-height: 40px;
+  padding: 10px;
+  width: 100%;
+  background-color: #fffce9;
+  color: #888;
+  font-size: 34px;
+  border: none;
+  outline: none;
+}
+.recipe_cover{
+  width: 660px;
+  height: 488px;
+  background: #f5f6f5;
+  position: relative;
+  margin-top: 25px;
+}
+.file{
+  display: block;
+  width: 660px;
+  height: 488px;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  top: 210px;
+  left: 175px;
+}
+.intro{
+  color: #909090;
+  text-align: center;
+  position: absolute;
+  top: 420px;
+  left: 420px;
+}
+
+.author{
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+}
+.author img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.author a{
+  list-style: none;
+  text-decoration: none;
+  color: #333333;
+}
+
+.description-txt{
+  width: 100%;
+  height: 108px;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #909090;
+  border: none;
+  resize: none;
+  outline: none;
+}
+textarea:hover{
+  background: #fffce9;
+}
+
+/*用料*/
+h2{
+  color:  #c0ae7d;
+  font-weight: bold;
+}
+.materials{
+  width: 100%;
+}
+table{
+  width: 100%;
+  height: 200px;
+}
+tr{height: 50px}
+
+.first{
+  width: 310px;
+  height: 50px;
+  border: solid 1px #f3f3f3;
+}
+.first input:hover{
+  background: #fffce9;
+}
+.first input{
+  width: 310px;
+  height: 50px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.second{
+  width: 310px;
+  height: 50px;
+  border: solid 1px #f3f3f3;
+}
+.second input{
+  width: 310px;
+  height: 50px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.second input:hover{
+  background: #fffce9;
+}
+.third{
+  width: 40px;
+}
+.third img {
+  margin-left: 30px;
+}
+.third img:hover{
+  cursor: pointer
+}
+
+.add{
+  width: 114px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 12px;
+}
+.add input{
+  width: 114px;
+  height: 30px;
+  background: #909090;
+  border: none;
+  outline: none;
+  color: white;
+}
+.add input:hover{
+  cursor: pointer;
+  background: #988d7d;
+}
+
+/*步骤*/
+
+.steps_container{
+  width: 100%;
+}
+.steps_container_li{
+  list-style: decimal;
+  width: 660px;
+  height: 88px;
+  margin-bottom: 30px;
+  margin-left: 3%;
+}
+
+.add_step{
+  width: 620px;
+  height: 78px;
+  float: left;
+}
+.del_line{
+  width: 40px;
+  height: 78px;
+  float: right;
+  text-align: center;
+}
+textarea{
+  width: 98%;
+  height: 100%;
+  font-size: 16px;
+  color: #909090;
+  border: none;
+  resize: none;
+  outline: none;
+}
+textarea:hover{
+  background: #fffce9;
+}
+
+.add{
+  width: 114px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 12px;
+}
+.add input{
+  width: 114px;
+  height: 30px;
+  background: #909090;
+  border: none;
+  outline: none;
+  color: white;
+}
+.add input:hover{
+  cursor: pointer;
+  background: #988d7d;
+}
+
+.tips_container{
+  width: 100%;
+  height: 188px;
+  margin-top: 50px;
+  background-color: #f5f6f5;
+  position: relative;
+}
+.tips_container_title{
+  width: 596px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+.description{
+  width: 596px;
+  height: 78px;
+  position: absolute;
+  top: 45px;
+  left: 35px;
+}
+.description_txt{
+  width: 100%;
+  height: 78px;
+  font-size: 16px;
+  color: #909090;
+  border: none;
+  resize: none;
+  outline: none;
+  margin-top: 20px;
+}
+.description_txt:hover{
+  background: #fffce9;
+}
+.modal{
+  margin: auto;
+  width: 30%;
+  top:220px
+}
+.content{
+  background-color: white;
+}
+.content a{
+  float: right;
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 16px;
+  color: black;
+}
+.modal-header{
+  border: none;
+  padding: 15px;
+}
+

@@ -1,0 +1,50 @@
+a {
+  list-style: none;
+  text-decoration: none;
+}
+.m-lately-centre {
+  width: 495px;
+  float: left;
+}
+.menu-new {
+  margin-top: 30px;
+}
+
+.menu-new .message {
+  padding-top: 20px;
+  width:200px;
+  float: right;
+}
+.menu-new .message {
+  width:50%;
+  padding-top: 15px;
+  float:right;
+}
+.green-font {
+  color: #9c6730;
+}
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #333333;
+}
+.name:hover {
+  color: #dd3915;
+}
+.creatername {
+  color: #909090;
+}
+.creatername:hover {
+  color: #dd3915;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+

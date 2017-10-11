@@ -1,0 +1,49 @@
+
+.mycontainer{
+  /*background: #d5efd2;*/
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  min-height:800px;
+}
+a {
+  text-decoration: none;
+  color: #313131;
+  font-size: 16px;
+}
+.hot-topic {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 90px;
+  overflow: hidden;
+}
+.hot-nav {
+  width: 65%;
+  font-size: 18px;
+  float: left;
+  padding-top: 20px;
+  border-bottom: solid 1px #e6e6e6;
+  overflow: hidden;
+}
+
+.hot-nav .second {
+  width: 65%;
+  overflow: hidden;
+}
+.hot-nav div{
+  width: 100px;
+  height: 50px;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+}
+a.active {
+  color: #dd3915;
+  font-weight: 500;
+  display: block;
+  height: 50px;
+  border-bottom: solid 2px #dd3915;
+}
+a:hover{
+  color: #dd3915;
+}

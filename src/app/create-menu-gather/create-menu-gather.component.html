@@ -1,0 +1,26 @@
+<div class="menu-gather-container">
+  <span class="set-title">创建一个新菜单</span>
+  <form id="info_form" class="info" #UpdateForm="ngForm">
+    <input type="hidden" name="creater_id" value="{{creater_id}}">
+    <div class="preview"></div>
+    <div class="single">
+      <div class="info_title">菜谱封面</div>
+      <div class="info_1"><input (change)="change($event)" name="menu_cover" type="file"></div>
+    </div>
+    <div *ngIf="warn"><span style="color: #dd3915;margin-left: 20px">{{warn}}</span></div>
+    <br>
+    <div class="single">
+      <div class="info_title">菜谱标题</div>
+      <div class="info_1"><input name="menu_name" class="menu_name" type="text" maxlength="30"></div>
+    </div>
+    <br>
+    <div class="single">
+      <div class="info_title">描述</div>
+      <div class="info_1"><textarea class="info_introduce" name="introduce" id="" cols="50" rows="2" maxlength="100"></textarea></div>
+    </div>
+    <div class="btn">
+      <button class="set_update" (click)="UpdateInfo($event)">创建菜单</button>
+    </div>
+
+  </form>
+</div>

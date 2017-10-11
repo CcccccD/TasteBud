@@ -1,0 +1,83 @@
+.account-set-container{
+  width: 1000px;
+  min-height: 600px;
+  margin: 0 auto;
+}
+.set-title{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100px;
+  display: block;
+  padding-top: 80px;
+  /*background: #c0ae7d;*/
+}
+.info{
+  width: 100%;
+  height: 700px;
+  /*background: #dbdac3;*/
+}
+.preview{
+  width: 100px;
+  height: 100px;
+  border: solid 1px #d4b77a;
+  margin-left: 110px;
+  margin-bottom: 10px;
+}
+.single{
+  height: 35px;
+  margin-bottom: 5px;
+  /*background: darkgrey;*/
+}
+.info_name{
+  height: 33px;
+  width: 200px;
+  border: solid 1px #d4b77a;
+}
+.info_introduce{
+  border: solid 1px#d4b77a;
+}
+.single .info_title{
+  float: left;
+  width: 100px;
+  text-align: right;
+  /*line-height: 25px;*/
+  padding-right: 30px;
+}
+.single .info_2 ,.info_1{
+  float: left;
+  width: 70%;
+  margin-left: 10px;
+}
+
+.set_update{
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-left: 30px;
+  border: transparent;
+  background: #dd3915;
+  color: white;
+}
+
+/*模态框*/
+.modal{
+  margin: auto;
+  width: 30%;
+  top:220px
+}
+.content{
+  background-color: white;
+}
+.content a{
+  float: right;
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 16px;
+  color: black;
+}
+.modal-header{
+  border: none;
+  padding: 15px;
+}
+

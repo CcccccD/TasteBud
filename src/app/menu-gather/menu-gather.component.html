@@ -1,0 +1,66 @@
+<div class="menu-gat">
+  <div class="menu-matter">
+    <div class="matter ">
+      <div class=" user-info">
+        <div class="info">
+          <h1 class="menu-name">{{_name}}</h1>
+          <div class="gray-font">{{_collect_times}}&nbsp;收藏</div>
+          <div class="desc">{{_descripe}}</div>
+          <div class="user">
+            <div class="user-head ">
+              <a  routerLink="/personal-center/{{_creater_id}}" routerLinkActive="active" class="user-link">
+                <img src="{{_usericon}}" width="30" height="30">&nbsp;{{_creater}}
+              </a>
+              <div class="_collect">
+                <!--<p>收藏</p>-->
+                <button  *ngIf="flagcollect1" class="collect" (click)="collect()">收藏</button>
+                <button *ngIf="!flagcollect1" class="uncollect" (click)="collect()">取消收藏</button>
+              </div>
+            </div>
+          </div>
+          <div class="found">
+            <div class="found-time">
+              创建时间:&nbsp;{{_creater_time}}&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="block-title"><h1><a href="#">{{details}} 菜谱</a></h1></div>
+
+        <ul class="">
+
+          <li *ngFor="let recipe of _recipe | paginate: { itemsPerPage: 4, currentPage: p }">
+            <div class="m-info">
+              <a routerLink="/menu-details/{{recipe.id}}" routerLinkActive="active" class="info-l" ><img src="{{recipe.recipe_pic}}" width="250px" height="160px"></a>
+              <div class="info-r">
+                <p class="name">
+                  <a  routerLink="/menu-details/{{recipe.id}}" routerLinkActive="active"><span>{{recipe.recipe_name}}</span></a>
+                </p>
+                <p class="ing ellipsis">{{recipe.recipe_descripe}}</p>
+                <p class="stats">{{recipe.cook_times}}做过</p>
+                <a class="author" routerLink="/personal-center/{{recipe.recipe_creater_id}}" routerLinkActive="active">{{recipe.recipe_creater}}</a>
+                <p *ngIf="_delFlag" class="delete"><span (click)="deleteRecipe(recipe.id)"><i class="glyphicon glyphicon-trash"></i></span></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="text-center">
+          <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+      <div class=" menu-popular ">
+        <div class="right-action-left "><a>流行菜单</a></div>
+        <div *ngFor="let menu of  IndexFashion" class="action">
+          <a routerLink="/menu-gatherOther/{{menu.id}}" routerLinkActive="active" class="recipe-menu " title="{{menu.name}}">
+            <img class="recipe-menu-cover" src="{{menu.cover_pic}}" alt="{{menu.name}}" width="300" height="197">
+            <div class="right-txt">{{menu.name}}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

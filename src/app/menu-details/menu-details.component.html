@@ -1,0 +1,100 @@
+<div class="menu_details_container">
+  <div class="menu_details_top">
+    <div class="menu_details_left">
+      <a routerLink="/personal-center" routerLinkActive="acti"></a>
+      <!--<app-recipe-details></app-recipe-details>-->
+      <div class="recipe_router">
+        <ul>
+          <li><a >首页</a><span> > </span></li>
+          <li><a >菜谱</a><span> > </span></li>
+          <li><span>{{_name}}</span></li>
+        </ul>
+      </div>
+      <p class="recipe_name">{{_name}}</p>
+      <div class="recipe_cover">
+        <div>
+          <img src="{{_cover_pic}}"/>
+        </div>
+        <div class="recipe_cover_bottom">
+          <div class="recipe_cover_bottom_left"><span>{{_cook_times}}</span>人做过这道菜</div>
+          <div class="recipe_cover_bottom_right">
+            <button class="add" (click)="add()">+</button>
+            <div *ngIf="flagadd" class="add_container">
+              <div class="greybackground"></div>
+              <div class="add_content">
+                <span class="add_title">把{{_name}}加如到你的菜单专辑</span>
+                <span class="add_close" (click)="closeadd()">x</span>
+                <div>
+                  <div class="little_pic"><img src="{{_cover_pic}}" alt="" width="170" height="108"></div>
+                  <div *ngIf="flagaddmenu" class="add_content_right">
+                    <h3 class="hint" >先去个人中心创建个菜单吧~</h3>
+                  </div>
+                  <div *ngIf="PersonalLists"  class="add_content_right">
+                    <select class="" name="" id="select" style="width: 300px;height: 30px">
+                      <option *ngFor="let item of PersonalLists" [value]="item.id">{{item.name}}</option>
+                    </select>
+                    <button type="button" class="confirm" (click)="addmenuconfirm()">确定</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button *ngIf="flagcollect1" class="collect" (click)="collect()">收藏</button>
+            <button *ngIf="!flagcollect1" class="uncollect" (click)="collect()">取消收藏</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe_detail">
+        <div class="menu_details_user">
+          <span>作者：</span>
+          <a routerLink="/personal-center/{{_creater_id}}" routerLinkActive="active">{{_creater}}</a>
+        </div>
+        <p>{{_descripe}}</p>
+        <span class="materials">用料</span>
+        <div>
+          <table>
+            <tr *ngFor="let item of details">
+              <td>{{item.goods}}</td>
+              <td>{{item.amount}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="method_of_recipe">{{_name}}的做法</span>
+        <div>
+          <ol>
+            <li *ngFor="let step of steps;let _index=index"><p class="step_detail"><span class="step_index">{{_index+1}}.</span>{{step.step}}</p></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="tips_container" *ngIf="flag">
+        <p class="tips">小贴士</p>
+        <p class="tip_detail">{{_tips}}</p>
+      </div>
+
+      <app-referto-do></app-referto-do>
+    </div>
+    <div class="menu_details_right">
+      <!--<app-menu-added></app-menu-added>-->
+      <div class="menu-added-title">
+        <div class="left">被大家加入到以下菜单</div>
+      </div>
+      <ul>
+        <li *ngFor="let menu of MenuLists;let _index=index">
+          <div class="menu_added">
+            <a routerLink="/menu-gather/{{menu.list_id}}" routerLinkActive="active">
+              <img width="300px" height="196px" src="{{menu.cover_pic}}"/>
+              <p>{{menu.list_name}}</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+

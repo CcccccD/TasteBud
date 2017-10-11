@@ -1,0 +1,136 @@
+.mycontainer{
+  padding-top:90px;
+  width:1000px;
+  margin:auto;
+  min-height: 1000px;
+}
+.mycontainer .main-left{
+  width:70%;
+  float:left;
+}
+.mycontainer .main-right{
+  width:28%;
+  margin-left: 20px;
+  float:left;
+  min-height:300px;
+}
+.mycontainer .main-left .left-header{
+  width:100%;
+  overflow: hidden;
+  height:50px;
+}
+.main-left .left-header .friend-UP{
+  line-height: 50px;
+  width:25%;
+  text-align: center;
+  background-color: #dd3915;
+  float:left;
+  color: white;
+  font-size: 15px;
+}
+.main-left .left-header .Rbox{
+  border-left: 5px solid white;
+  width:75%;
+  background-color: #F1F1F1;
+  height:50px;
+  float:left;
+  box-sizing: border-box;
+}
+
+.mycontainer .main-left .messageBox{
+  width:100%;
+  min-height: 200px;
+  border:1px solid #f3f3f3;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.messageBox .mes-Box{
+  padding:20px;
+  overflow: hidden;
+}
+.messageBox .user_link{
+  background: none;
+  color: #dd3915;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.messageBox .user_link:hover{
+  text-decoration: none;
+}
+.messageBox .user_link img{
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+}
+.messageBox .mes-Box .second{
+  margin-top:20px;
+  overflow: hidden;
+  position: relative;
+}
+.messageBox .create-date{
+  float:right;
+  font-size: 14px;
+  color:#ccc;
+  margin-top:13px;
+}
+.mes-Box .second a{
+  float:left;
+}
+.mes-Box .second .text {
+  padding-left: 300px;
+  margin-left: -280px;
+  width: 100%;
+  float: left;
+  display: block;
+}
+.second .text .text_title{
+  color:#dd3915;
+  font-size: 12px;
+}
+.second .text .descripe{
+  font-size: 14px;
+}
+
+.mes-Box .second .foot{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  color:#ccc;
+}
+.main-right .content-box{
+  width:100%;
+  min-height: 200px;
+  padding:10px 6px;
+  text-align: center;
+}
+.main-right .content-box h3{
+  color:red;
+  margin-top:0;
+  font-size: 20px;
+}
+.main-right .content-box .user_link{
+  background: none;
+  color: #dd3915;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+.main-right .content-box .user_link:hover{
+  text-decoration: none;
+}
+.main-right .content-box .user_link img {
+  border-radius: 40%;
+  vertical-align: middle;
+  position: relative;
+}
+.main-right .content-box .container-dyn{
+  width: 60%;
+  float: right;
+}
+.main-right .content-box .container-dyn p{
+  color: black;
+}
+.main-right .content-box .container-dyn p:hover{
+  color: #dd3915;
+}

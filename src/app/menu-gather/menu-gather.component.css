@@ -1,0 +1,302 @@
+
+.menu-gat {
+
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: #fff;
+  color: #222;
+  min-width: 960px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+
+  text-decoration: none;
+}
+
+.menu-gat {
+  width: 1000px;
+  margin: auto;
+  padding-top: 90px;
+}
+
+.matter {
+  width: 100%;
+}
+
+.user-info {
+  width: 66%;
+  float: left;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+/*用户菜单信息*/
+.info {
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+  background: #ededed;
+}
+
+.info div {
+  padding-top: 20px;
+}
+
+.menu-name {
+  padding-top: 34px;
+  font-size: 34px;
+  margin: 0 0 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  word-break: break-all;
+  text-align: center;
+}
+
+.gray-font {
+  text-align: center;
+  color: #909090;
+}
+
+.menu-name, .col-per {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.col-per {
+  color: #bebebe;
+}
+
+.desc, .user, .found {
+  padding: 10px 30px;
+}
+
+.user-head {
+  display: block;
+}
+
+.user-link {
+  float: left;
+}
+
+p {
+  margin: 0;
+}
+
+._collect {
+  float: right;
+  width: 80px;
+  text-align: center;
+  margin-right: 50px;
+}
+._collect{
+  font-size: 15px;
+  color: white;
+}
+
+.found {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+/*菜单内容*/
+.block-title a {
+  font-size: 28px;
+  color: #222;
+  padding: 16px 0 8px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.block-title .m-info {
+  font-size: 28px;
+  padding: 16px 0 8px;
+  font-weight: 700;
+}
+
+.info-l {
+  width: 40%;
+}
+
+.info-r {
+  width: 60%;
+  margin: auto;
+  float: right;
+  padding-top: 10px;
+}
+
+.info-r .name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+
+}
+
+.info-r .name a {
+  color: #222;
+}
+
+.info-r .name a:hover {
+  color: #dd3915;
+}
+.info-r .delete{
+  color:#ccc;
+  margin-top:25px;
+  text-align: right;
+}
+
+
+.step-icon {
+  background-position: 0 -20px;
+}
+
+.step-icon {
+  font-size: 14px;
+  background: #bebebe;
+  margin: 0 2px;
+  width: 44px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ing {
+  color: #9c6730;
+  font-size: 14px;
+}
+
+.stats, .author {
+  color: #909090;
+  font-size: 13px;
+}
+
+.m-info {
+  width: 100%;
+  float: left;
+  padding-top: 20px;
+}
+
+/*流行菜单*/
+.menu-popular {
+  margin: auto;
+  float: right;
+  padding-top: 20px;
+}
+.action{
+
+  margin-bottom: 5px;
+}
+.right-action a {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.right-action {
+  overflow: hidden;
+  line-height: 25px;
+}
+
+.right-actions {
+  text-align: center;
+  float: right;
+  padding-top: 20px;
+}
+
+.right-actions .recipe-menu {
+  text-align: center;
+  display: block;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.has-border {
+  border: 1px solid #f3f3f3;
+}
+
+.image-link {
+  background-color: transparent;
+}
+
+.right-txt {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.8;
+  text-align: center;
+  padding: 14px 10px;
+}
+
+.recipe-menu-cover {
+  display: block;
+}
+
+.image-link img {
+  object-fit: cover;
+}
+
+img {
+  border: 0;
+}
+
+.right-actions .recipe-menu .right-txt {
+  padding: 14px 10px;
+  font-size: 16px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.right-action-right {
+  float: right;
+}
+
+.right-action-right a {
+  overflow: hidden;
+  margin: auto;
+  font-size: 14px;
+  color: #dd3915;
+}
+
+.right-action-right a:hover {
+  color: #fff;
+  background-color: #dd3915;
+}
+
+.right-action-left {
+  float: left;
+  margin: 0;
+
+}
+
+.right-action-left a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c0ae7d;
+}
+/*菜谱内容下，分页现状*/
+
+
+.uncollect{
+  width: 110px;
+  height: 45px;
+  background: #909090;
+  color: white;
+  border: none;
+}
+.collect{
+  width: 110px;
+  height: 45px;
+  background: #DD3915;
+  color: white;
+  margin-right: 50px;
+  border: none;
+}

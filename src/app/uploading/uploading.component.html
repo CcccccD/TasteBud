@@ -1,0 +1,25 @@
+<div class="upload_main">
+  <div class="upload_centre">
+    <h3>上传你的<span>{{recipe_name}}作品</span></h3>
+    <form class="form-horizontal" id="myform" #UploadForm="ngForm">
+      <div class="upload_centrel">
+        <div class="upload_centre_left">
+          <div class="preview"></div>
+          <input type="hidden" name="recipe_name" value="{{recipe_name}}">
+          <input type="hidden" name="recipe_id" value="{{recipe_id}}">
+          <input type="hidden" name="creater_id" value="{{creater_id}}">
+          <span class="glyphicon glyphicon-plus btn-lg" aria-hidden="true">上传作品图</span>
+          <input tabindex="-1" type="file" (change)="change($event)" name="cover_pic"  >
+        </div>
+        <div *ngIf="warn"><span style="color: #dd3915;margin-left: 20px">{{warn}}</span></div>
+        <div class="upload_centre_right">
+          <textarea name="description" class="xdtext" id="desc" placeholder="心得体会~"></textarea>
+        </div>
+      </div>
+      <div class="upload_btn">
+        <button type="button" class="btn" (click)="uploadWork($event)">发布作品</button>
+      </div>
+    </form>
+  </div>
+</div>
+

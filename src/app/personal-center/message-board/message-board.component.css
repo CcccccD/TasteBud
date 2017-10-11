@@ -1,0 +1,78 @@
+#message_textarea{
+  width: 610px;
+  height: 250px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border: solid 1px #ebebeb;
+}
+.send-message{
+  width: 100px;
+  height: 40px;
+  background-color: #DD3915;
+  border: 1px solid transparent;
+  color: white;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+.single_message{
+  overflow: hidden;
+  list-style: none;
+  width: 87%;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.image_link{
+  width: 30px;
+  float: left;
+  line-height:40px;
+}
+.image_link img{
+  border-radius: 50%;
+}
+.right{
+  width: 800px;
+  float: right;
+}
+.right_top a{
+  text-decoration: none;
+}
+.right_top .name{
+  color: #DD3915;
+}
+.right_top span{
+  color: grey;
+}
+.right_bottom{
+  margin-top: 10px;
+}
+.hint{
+  display: block;
+  width: 281px;
+  height: 290px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 35px;
+  color: #c43313;
+}
+
+/*模态框*/
+.modal{
+  margin: auto;
+  width: 30%;
+  top:220px
+}
+.content{
+  background-color: white;
+}
+.content a{
+  float: right;
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 16px;
+  color: black;
+}
+.modal-header{
+  border: none;
+  padding: 15px;
+}
+

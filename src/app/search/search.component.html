@@ -1,0 +1,18 @@
+<div class="my_container">
+  <div class="search_left">
+    <div class="search_header">
+      <ul>
+        <li><a routerLink='./recipe' routerLinkActive="active">菜谱</a></li>
+        <li><a routerLink="./user" routerLinkActive="active">用户</a></li>
+      </ul>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="search_right">
+    <app-right-sidebar></app-right-sidebar>
+  </div>
+
+</div>
+

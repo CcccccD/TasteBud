@@ -1,0 +1,105 @@
+.products{
+width: 1150px;
+}
+.single_product{
+  width: 280px;
+  height: 435px;
+  float: left;
+  margin-top: 35px;
+  margin-left: 34px;
+  border: solid 1px #f0f0f0;
+  position: relative;
+
+}
+.product_pic_darken{
+  width: 280px;
+  height: 280px;
+  background: rgba(0, 0, 0, 0.44);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  opacity: 0;
+}
+.product_pic_darken:hover{
+  opacity:1;
+}
+.dianzan p{
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  width: 125px;
+  height: 45px;
+  background: rgba(197, 51, 18, 0.9);
+  margin-top: 120px;
+  margin-left: 78px;
+  color: white;
+  padding-left: 55px;
+  padding-top: 10px;
+}
+.quxiaozan p{
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  width: 125px;
+  height: 45px;
+  background: rgba(229, 229, 229, 0.9);
+  margin-top: 120px;
+  margin-left: 78px;
+  color: #4b4b4b;
+  text-align: center;
+  line-height: 45px;
+}
+.product_name{
+  /*background: grey;*/
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.product_name a{
+  font-size: 20px;
+  color: #DD3915;
+  text-decoration: none;
+}
+.product_name a:hover{
+  color: #ffffff;
+  background: #DD3915;
+}
+.product_describe{
+  /*background: grey;*/
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 65px;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #222222;
+}
+.product_datetime{
+  float: left;
+  width: 50%;
+  /*background: grey;*/
+  color: grey;
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: 100;
+}
+.product_zan{
+  float: left;
+  color: grey;
+  width: 50%;
+  /*background: grey;*/
+  text-align: right;
+  padding-right: 10px;
+  font-size: 13px;
+  font-weight: 100;
+}
+.hint{
+  display: block;
+  width: 281px;
+  height: 290px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 35px;
+  color: #c43313;
+}
+
+

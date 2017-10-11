@@ -1,0 +1,24 @@
+<div class="m-lately ">
+  <div class="m-lately-centre">
+    <ul>
+      <li *ngFor="let item of Alllists | orderbycollect | paginate: { itemsPerPage: 5, currentPage: p }">
+        <div class="menu-new ">
+          <a class="menu-img" routerLink="/menu-gather/{{item.id}}"><img src="{{item.cover_pic}}" width="215" height="136"></a>
+          <div class="message">
+            <p class="name"><a class="name" routerLink="/menu-gather/{{item.id}}">{{item.name}}</a></p>
+            <p class="green-font">{{item.descripe}}</p>
+            <a class="creatername" routerLink="/personal-center/{{item.creater_id}}">{{item.creater}}</a> &nbsp; 创建
+            <p>{{item.collect_times}}  &nbsp;收藏</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div  class="text-center">
+      <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+
+
+

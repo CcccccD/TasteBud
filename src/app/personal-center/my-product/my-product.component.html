@@ -1,0 +1,23 @@
+<div class="products" >
+  <h3 class="hint" *ngIf="flag">还没有创建过菜谱哟~</h3>
+
+  <div class="single_product" *ngFor="let item of PersonalProduct; let i = index" >
+    <div class="product_pic"><img src="{{item.cover_pic}}" height="280" width="280"/></div>
+    <div class="product_pic_darken">
+      <div (click)="exchange(i)">
+        <div class="dianzan" *ngIf="thumb_flag2[i]"><p>赞</p></div>
+        <div class="quxiaozan" *ngIf="!thumb_flag2[i]"><p>取消赞</p></div>
+      </div>
+    </div>
+    <!--鼠标移动到图片上显示变暗效果-->
+    <div class="product_name">
+      <a routerLink="/menu-details/{{item.reciper_id}}" routerLinkActive="active">{{item.name}}</a>
+      <span *ngIf="_delFlag" class="delete" (click)="deleteWork(item.id)"><i class="glyphicon glyphicon-trash"></i></span>
+    </div>
+    <!--作品名称只能是上传作品处的菜谱名-->
+    <!--点击作品名称跳转的是原菜谱页面-->
+    <div class="product_describe">{{item.descripe}}</div>
+    <div class="product_datetime">{{item.create_time.substr(0,10)}}</div>
+    <div class="product_zan">{{item.thumb_numbers}}个赞</div>
+  </div>
+  </div>

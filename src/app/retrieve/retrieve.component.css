@@ -1,0 +1,67 @@
+.my_container{
+  /*width:100%;*/
+  background: url("../../assets/images/background_pic07.jpg") center no-repeat;
+  min-height:758px;
+  /*overflow: hidden;*/
+}
+.my_top{
+  /*background-color: darkgrey;*/
+  padding-top: 30px;
+}
+.right_top{
+  display: block;
+  margin-left: 1000px;
+}
+.right_top a{
+  color: #dd3915;
+  text-decoration: none;
+}
+.one{
+  display: block;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+}
+.lable0{
+  color: white;
+}
+.mycontent{
+  display: block;
+  background-color: rgba(49, 49, 49, 0.62);
+}
+.form-control{
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 0 20px 0 45px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+.form-control + i{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 17px;
+  color: #c8c8c8;
+  transition: all 0.5s ease 0s;
+}
+.form-control:focus{
+  background: #e0e0e0;
+  box-shadow: none;
+  outline: 0 none;
+}
+.form-control:focus + i{
+  color: #00b4ef;
+}
+.btn-danger{
+
+  background-color: #dd3915;
+  opacity: 1;
+}
+.btn-danger:hover{
+  background-color: #dd3915;
+}
+

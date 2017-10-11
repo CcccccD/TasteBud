@@ -1,0 +1,9 @@
+<div class="favorit_menu_gather">
+  <h3 class="hint" *ngIf="flag">还没有收藏过菜单哟~</h3>
+  <div class="single_menu_gather" *ngFor="let item of favorite">
+    <div class="cover_pic"><img src="{{item.cover_pic}}" height="136" width="215"/></div>
+    <div class="menu_gather_name"><a routerLink="/menu-gather/{{item.reciper_id}}" routerLinkActive="active">{{item.name}}</a></div>
+    <div class="include_menunum">{{item.descripe}}</div>
+    <div class="author"><a routerLink="/personal-center/{{item.creater_id}}">{{item.creater}}</a> </div>
+  </div>
+</div>
